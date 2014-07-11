@@ -284,7 +284,7 @@ markdownInDirectory(inputDirectory).
           seriouslyWriteThisFile(page.outFile,
               render(page.file, page));
         } catch (e) {
-          console.log('could not write ' + page.outFile);
+          console.log('could not write ' + page.outFile, e.stack);
         }
       });
     });
